@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Poster</string>
+    <string name="this_is_the_explanation_text_that_gives_more_details_about_the_title_you_can_add_more_content_here">This is the explanation text that gives more details about the title. You can add more content here.</string>
+    <string name="your_title_here">Your Title Here</string>
+    <string name="neon_howl">Neon Howl</string>
+
+    <string name="in_the_heart_of_a_neon_lit_city">
+    In a neon-lit city, chaos erupts when an ancient curse awakens the Night Howler. Led by Beef Wellington and Starla Moonshine, a team of heroes must uncover the truth before the creature plunges the world into eternal darkness.
+</string>
+    <string name="purchase_tickets">Purchase Tickets</string>
+
+
+
+    <string-array name="cinemas_array">
+        <item>Yes Planet</item>
+        <item>Lev Cinema</item>
+        <item>Rav Chen</item>
+        <item>Cinema City</item>
+        <item>Hot Cinema</item>
+    </string-array>
+
+
+    <string-array name="screening_times_array">
+        <item>10:30 AM</item>
+        <item>12:45 PM</item>
+        <item>3:00 PM</item>
+        <item>5:15 PM</item>
+        <item>7:30 PM</item>
+        <item>9:45 PM</item>
+        <item>11:00 PM</item>
+    </string-array>
+
+</resources>
+
