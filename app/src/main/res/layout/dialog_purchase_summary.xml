@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/dialogTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cart Summary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:paddingBottom="10dp"/>
+
+    <TextView
+        android:id="@+id/cinema_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Cinema: none"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/Date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Screening Time: none"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/Number_Of_Tickets"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Number Of Tickets: 0"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/Total_cost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total cost: 0$"
+        android:textSize="16sp" />
+
+
+
+
+    <Button
+        android:id="@+id/closeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textStyle="bold"/>
+</LinearLayout>

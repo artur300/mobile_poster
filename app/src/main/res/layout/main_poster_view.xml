@@ -147,21 +147,30 @@
             android:textColor="@color/white"
             android:paddingBottom="16dp" />
 
-
-
-        <!-- כפתור רכישה -->
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/purchase"
+        <Button
+            android:id="@+id/viewSummaryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="@drawable/button_style"
-            android:text="@string/purchase_tickets"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"
-           />
+            android:text="View Purchase Summary"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
+        <!-- כפתור רכישה -->
+        <Button
+            android:id="@+id/addToCartButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add to Cart"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
 
     </LinearLayout>
 </ScrollView>
