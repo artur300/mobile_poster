@@ -36,31 +36,12 @@ class MainActivity : AppCompatActivity() {
         val posterImageView: ImageView = findViewById(R.id.Poster)
         val cartList = ArrayList<Ticket>()
 
-        // אנימציה לפוסטר - סיבוב ושקיפות
-        posterImageView.setOnClickListener {
-            val rotate = ObjectAnimator.ofFloat(posterImageView, "rotationY", 0f, 360f).apply {
-                duration = 1000
-            }
-            val fadeOut = ObjectAnimator.ofFloat(posterImageView, "alpha", 1f, 0f).apply {
-                duration = 500
-            }
-            val fadeIn = ObjectAnimator.ofFloat(posterImageView, "alpha", 0f, 1f).apply {
-                duration = 500
-            }
-
-            // סט אנימציות - הפעלה סדרתית
-            val animatorSet = AnimatorSet()
-            animatorSet.play(rotate).with(fadeOut)
-            animatorSet.play(fadeIn).after(fadeOut)
-            animatorSet.start()
-        }
 
         // הגדרות רכיבים
         setupCinemaSpinner(this, cinemaSpinner)
         setupTimeSpinner(this, timeSpinner)
         setupCheckBoxListeners(adultCheckBox, childCheckBox)
         setupSeekBar(ticketSeekBar, ticketCountTextView)
-
         // מאזין לכפתור "Add to Cart"
         addToCartButton.setOnClickListener {
             addToCart(
@@ -74,6 +55,10 @@ class MainActivity : AppCompatActivity() {
             )
         }
 
+        // אנימציה לפוסטר - סיבוב ושקיפות
+        posterImageView.setOnClickListener {
+            animatePoster(posterImageView)
+        }
 
         viewSummaryButton.setOnClickListener {
             showCartSummaryDialog(this, cartList)
