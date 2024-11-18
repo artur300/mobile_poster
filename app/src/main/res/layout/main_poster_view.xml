@@ -170,21 +170,11 @@
 
         <!-- כפתור רכישה -->
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/addToCartButton"
+            android:id="@+id/getTicketsButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Add to Cart"
-            android:textColor="@color/white"
-            android:background="@drawable/button_style"
-            android:layout_marginTop="40dp"/>
-
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/viewSummaryButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Purchase Summary"
-            android:textColor="@color/white"
+            android:text="Get Tickets"
+            android:textStyle="bold"
             android:background="@drawable/button_style"
             android:layout_marginTop="16dp"/>
 
@@ -207,6 +197,15 @@
             android:background="@drawable/button_style"
             android:layout_marginTop="16dp"/>
 
-
+        <RadioButton
+            android:id="@+id/orderStatusButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/order_status_button"
+            android:text="Order Status"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:checked="false" />
     </LinearLayout>
 </ScrollView>
