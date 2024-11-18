@@ -8,6 +8,8 @@ import android.widget.Toast
 import android.app.Dialog
 import android.widget.Button
 import android.widget.TextView
+import androidx.core.content.ContextCompat
+
 
 // פונקציה להוספת הכרטיסים לעגלה
 fun addToCart(
@@ -89,6 +91,8 @@ fun showCartSummaryDialog(context: Context, cartList: ArrayList<Ticket>) {
 
     dialog.show()
 }
+
+
 
 
 

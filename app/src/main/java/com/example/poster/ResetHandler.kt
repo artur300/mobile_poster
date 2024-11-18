@@ -5,7 +5,12 @@ import android.widget.SeekBar
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.content.ContextCompat
 
+// משתנה גלובלי לציון אם ההזמנה הושלמה או לא
+var isOrderPlaced = false
+
+// פונקציה לאיפוס הבחירות
 fun resetSelections(
     cinemaSpinner: Spinner,
     timeSpinner: Spinner,
@@ -13,6 +18,7 @@ fun resetSelections(
     childCheckBox: CheckBox,
     ticketSeekBar: SeekBar,
     ticketCountTextView: TextView,
+    statusText: TextView,
     cartList: ArrayList<Ticket>
 ) {
     // איפוס הבחירה של הספינרים
@@ -30,8 +36,11 @@ fun resetSelections(
     // איפוס רשימת העגלה
     cartList.clear()
 
-    // הודעה למשתמש על האיפוס
+    // איפוס סטטוס ההזמנה
+    isOrderPlaced = false
+    statusText.text = "Order Status: Not Placed"
+    statusText.setTextColor(ContextCompat.getColor(cinemaSpinner.context, R.color.black))
+
+    // הודעה למשתמש
     Toast.makeText(cinemaSpinner.context, "Selections have been reset.", Toast.LENGTH_SHORT).show()
 }
-
-

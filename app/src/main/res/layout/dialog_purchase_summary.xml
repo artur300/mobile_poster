@@ -41,7 +41,13 @@
         android:text="Total cost: 0$"
         android:textSize="16sp" />
 
-
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Order Status: Not Placed"
+        android:textSize="16sp"
+        android:textColor="#F44336" />
 
 
     <Button

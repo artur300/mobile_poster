@@ -5,4 +5,4 @@
     android:padding="10dp"
     android:textSize="18sp"
     android:textColor="#FFFFFF"
-    android:background="@drawable/spinner_background"/>
+    android:background="#6A4ED9"/>

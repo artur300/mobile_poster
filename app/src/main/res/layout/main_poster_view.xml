@@ -86,6 +86,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
+            android:background="#6A4ED9"
             />
 
 
@@ -99,6 +100,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
+            android:background="#6A4ED9"
 
             />
 
@@ -119,7 +121,8 @@
             android:layout_height="wrap_content"
             android:max="10"
             android:progress="1"
-            android:paddingBottom="16dp" />
+            android:paddingBottom="16dp"
+            />
 
         <TextView
             android:id="@+id/ticketCountTextView"
@@ -147,14 +150,6 @@
             android:textColor="@color/white"
             android:paddingBottom="16dp" />
 
-        <Button
-            android:id="@+id/viewSummaryButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="View Purchase Summary"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
-
         <!-- כפתור רכישה -->
         <Button
             android:id="@+id/addToCartButton"
@@ -163,6 +158,23 @@
             android:text="Add to Cart"
             android:textStyle="bold"
             android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/viewSummaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="View Purchase Summary"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <Button
+            android:id="@+id/confirm_purchase"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Confirm Purchase"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
 
         <Button
             android:id="@+id/resetButton"
