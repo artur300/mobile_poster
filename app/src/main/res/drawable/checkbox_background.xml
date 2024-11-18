@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- מצב נבחר -->
+    <item android:state_checked="true">
+        <shape>
+            <solid android:color="#FB0CC9" /> <!-- צבע ירוק לפריט נבחר -->
+            <corners android:radius="10dp" /> <!-- פינות מעוגלות יותר -->
+
+        </shape>
+    </item>
+
+    <!-- מצב רגיל -->
+    <item>
+        <shape>
+            <solid android:color="#3F51B5" /> <!-- צבע אפור לפריט רגיל -->
+            <corners android:radius="10dp" />
+        </shape>
+    </item>
+</selector>
+

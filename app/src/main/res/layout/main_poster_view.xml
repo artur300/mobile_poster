@@ -86,7 +86,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:background="#6A4ED9"
             />
 
 
@@ -94,13 +93,11 @@
 
         <!-- ספינר של זמני הקרנה -->
         <Spinner
-
             android:id="@+id/timeSpinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginBottom="16dp"
-            android:background="#6A4ED9"
 
             />
 
@@ -122,7 +119,11 @@
             android:max="10"
             android:progress="1"
             android:paddingBottom="16dp"
-            />
+            android:tickMark="@drawable/tick_mark"
+            android:tickMarkTint="#FFEB3B"
+            android:tickMarkTintMode="src_in"
+            android:thumbTint="@color/bluish" />
+
 
         <TextView
             android:id="@+id/ticketCountTextView"
@@ -134,55 +135,71 @@
             android:paddingBottom="16dp" />
 
         <!-- Checkbox לבחירת סוג הכרטיס (מבוגר/ילד) -->
-        <CheckBox
-            android:id="@+id/adultCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Adult Ticket: 20$"
-            android:textColor="@color/white"
-            android:paddingBottom="8dp" />
+            <CheckBox
+                android:id="@+id/adultCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adult Ticket: 20$"
+                android:textColor="@color/white"
+                android:padding="15dp"
+                android:background="@drawable/checkbox_background"
+                 />
 
-        <CheckBox
-            android:id="@+id/childCheckBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Child Ticket 10$"
-            android:textColor="@color/white"
-            android:paddingBottom="16dp" />
+            <CheckBox
+                android:id="@+id/childCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Child Ticket: 10$"
+                android:textColor="@color/white"
+                android:padding="15dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/checkbox_background"
+                />
+
+
+
+
+
 
         <!-- כפתור רכישה -->
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/addToCartButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Add to Cart"
-            android:textStyle="bold"
-            android:layout_marginTop="16dp"/>
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"
+            android:layout_marginTop="40dp"/>
 
-        <Button
+
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/viewSummaryButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="View Purchase Summary"
-            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"
             android:layout_marginTop="16dp"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/confirm_purchase"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Confirm Purchase"
-            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"
             android:layout_marginTop="16dp"/>
 
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/resetButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Reset"
-            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/button_style"
             android:layout_marginTop="16dp"/>
+
 
     </LinearLayout>
 </ScrollView>
