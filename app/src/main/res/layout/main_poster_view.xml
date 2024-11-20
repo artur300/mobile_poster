@@ -11,7 +11,7 @@
         android:id="@+id/mainPoster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/teal_700"
+        android:background="@color/black"
         android:orientation="vertical"
         android:padding="15dp">
 
@@ -204,13 +204,13 @@
             android:layout_height="wrap_content"
             android:background="@drawable/order_status_button"
             android:text="Order Status"
-            android:layout_gravity="center"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:padding="10dp"
             android:checked="false"
             android:clickable="false"
             android:focusable="false"
+            android:layout_marginTop="16dp"
             />
     </LinearLayout>
 </ScrollView>

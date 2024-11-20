@@ -12,7 +12,7 @@
     <!-- מצב רגיל -->
     <item>
         <shape>
-            <solid android:color="#3F51B5" /> <!-- צבע סגול לפריט רגיל -->
+            <solid android:color="#6A4ED9" /> <!-- צבע סגול לפריט רגיל -->
             <corners android:radius="10dp"/>
 
         </shape>

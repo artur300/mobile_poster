@@ -10,7 +10,7 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.ImageView
 import android.widget.RadioButton
-
+import com.example.poster.animateButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -42,6 +42,7 @@ class MainActivity : AppCompatActivity() {
 
         // מאזין ללחיצה על "Confirm Purchase"
         confirmPurchaseButton.setOnClickListener {
+            animateButton(confirmPurchaseButton)
             isOrderPlaced = handleConfirmPurchase(this, orderStatusButton) // משנה את המצב ל-true
             updateOrderStatus(orderStatusButton, isOrderPlaced) // מעדכן את מצב הכפתור
         }
@@ -55,6 +56,8 @@ class MainActivity : AppCompatActivity() {
 
         // מאזין לכפתור "Get Tickets"
         getTicketsButton.setOnClickListener {
+
+            animateButton(getTicketsButton)
             // קודם כל מוסיפים לעגלה
             addToCart(
                 context = this,
@@ -69,6 +72,7 @@ class MainActivity : AppCompatActivity() {
 
             // מאזין לכפתור "Reset"
             resetButton.setOnClickListener {
+                animateButton(resetButton)
                 // מציאת ה-TextView מתוך ה-Dialog
                 val dialogView = layoutInflater.inflate(R.layout.dialog_purchase_summary, null)
                 val statusText: TextView = dialogView.findViewById(R.id.statusText)
