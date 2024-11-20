@@ -31,6 +31,16 @@ class MainActivity : AppCompatActivity() {
         val resetButton: Button = findViewById(R.id.resetButton)
         val posterImageView: ImageView = findViewById(R.id.Poster)
         val cartList = ArrayList<Ticket>()
+        val icon: ImageView = findViewById(R.id.icon)
+
+        // הפעלת האנימציה האינסופית
+        startSizeAnimation(icon)
+
+        // שינוי צבע זמני בעת לחיצה
+        icon.setOnClickListener {
+            handleIconClick(icon)
+            animatePoster(posterImageView)
+        }
 
 
         // מציאת הכפתורים
