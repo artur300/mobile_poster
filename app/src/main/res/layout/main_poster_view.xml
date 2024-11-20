@@ -11,7 +11,7 @@
         android:id="@+id/mainPoster"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/black"
+        android:background="@color/teal_700"
         android:orientation="vertical"
         android:padding="15dp">
 
@@ -174,6 +174,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Get Tickets"
+            android:textColor="@color/white"
             android:textStyle="bold"
             android:background="@drawable/button_style"
             android:layout_marginTop="16dp"/>
@@ -201,11 +202,15 @@
             android:id="@+id/orderStatusButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:button="@drawable/order_status_button"
+            android:background="@drawable/order_status_button"
             android:text="Order Status"
+            android:layout_gravity="center"
             android:textSize="18sp"
             android:textColor="@color/white"
             android:padding="10dp"
-            android:checked="false" />
+            android:checked="false"
+            android:clickable="false"
+            android:focusable="false"
+            />
     </LinearLayout>
 </ScrollView>

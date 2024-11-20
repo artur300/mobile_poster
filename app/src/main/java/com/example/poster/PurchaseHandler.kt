@@ -8,7 +8,7 @@ import android.widget.Toast
 import android.app.Dialog
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.content.ContextCompat
+
 
 
 // פונקציה להוספת הכרטיסים לעגלה

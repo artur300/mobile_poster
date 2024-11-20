@@ -9,8 +9,7 @@ import android.widget.Button
 import android.widget.Spinner
 import android.widget.TextView
 import android.widget.ImageView
-import android.widget.Toast
-import android.widget.*
+import android.widget.RadioButton
 
 
 
@@ -32,7 +31,20 @@ class MainActivity : AppCompatActivity() {
         val resetButton: Button = findViewById(R.id.resetButton)
         val posterImageView: ImageView = findViewById(R.id.Poster)
         val cartList = ArrayList<Ticket>()
+
+
+        // מציאת הכפתורים
+        val confirmPurchaseButton: Button = findViewById(R.id.confirm_purchase)
         val orderStatusButton: RadioButton = findViewById(R.id.orderStatusButton)
+
+        // מצב התחלתי: אדום
+        updateOrderStatus(orderStatusButton, isOrderPlaced)
+
+        // מאזין ללחיצה על "Confirm Purchase"
+        confirmPurchaseButton.setOnClickListener {
+            isOrderPlaced = handleConfirmPurchase(this, orderStatusButton) // משנה את המצב ל-true
+            updateOrderStatus(orderStatusButton, isOrderPlaced) // מעדכן את מצב הכפתור
+        }
 
 
         // הגדרות רכיבים
@@ -70,7 +82,8 @@ class MainActivity : AppCompatActivity() {
                     ticketSeekBar = ticketSeekBar,
                     ticketCountTextView = ticketCountTextView,
                     statusText = statusText,
-                    cartList = cartList
+                    cartList = cartList,
+                    orderStatusButton = orderStatusButton
                 )
             }
 
