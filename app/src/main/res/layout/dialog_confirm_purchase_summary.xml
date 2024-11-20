@@ -1,19 +1,24 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="16dp">
 
+
+    <!-- כותרת הדיאלוג -->
     <TextView
         android:id="@+id/dialogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cart Summary"
+        android:text="Order Summary"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
-        android:paddingBottom="10dp"/>
+        android:paddingBottom="10dp" />
 
+    <!-- שם הקולנוע -->
     <TextView
         android:id="@+id/cinema_name"
         android:layout_width="match_parent"
@@ -22,6 +27,7 @@
         android:textColor="@color/white"
         android:textSize="16sp" />
 
+    <!-- זמן ההקרנה -->
     <TextView
         android:id="@+id/Date"
         android:layout_width="match_parent"
@@ -30,6 +36,7 @@
         android:textColor="@color/white"
         android:textSize="16sp" />
 
+    <!-- מספר הכרטיסים -->
     <TextView
         android:id="@+id/Number_Of_Tickets"
         android:layout_width="match_parent"
@@ -38,27 +45,29 @@
         android:textColor="@color/white"
         android:textSize="16sp" />
 
+    <!-- סיכום כולל -->
     <TextView
         android:id="@+id/Total_cost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total cost: 0$"
+        android:text="Total Cost: 0$"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
+    <!-- סטטוס ההזמנה -->
     <TextView
-        android:id="@+id/statusText"
+        android:id="@+id/order_status"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Order Status: Not Placed"
+        android:text="Order Status: Placed"
         android:textSize="16sp"
-        android:textColor="#F44336" />
+        android:textColor="#4CAF50" />
 
-
+    <!-- כפתור סגירה -->
     <Button
         android:id="@+id/closeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Close"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 </LinearLayout>

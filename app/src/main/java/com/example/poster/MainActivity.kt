@@ -45,6 +45,9 @@ class MainActivity : AppCompatActivity() {
             animateButton(confirmPurchaseButton)
             isOrderPlaced = handleConfirmPurchase(this, orderStatusButton) // משנה את המצב ל-true
             updateOrderStatus(orderStatusButton, isOrderPlaced) // מעדכן את מצב הכפתור
+            showConfirmPurchaseSummaryDialog(this, cartList)
+            getTicketsButton.isEnabled = false
+            getTicketsButton.alpha = 0.5f // מוריד את השקיפות כדי לסמן שהוא נעול
         }
 
 
@@ -69,6 +72,13 @@ class MainActivity : AppCompatActivity() {
                 cartList = cartList
             )
 
+            ticketSeekBar.progress = 0
+            ticketCountTextView.text = "Number of Tickets: 0"
+
+            // איפוס CheckBoxes
+            adultCheckBox.isChecked = false
+            childCheckBox.isChecked = false
+
 
             // מאזין לכפתור "Reset"
             resetButton.setOnClickListener {
@@ -89,6 +99,9 @@ class MainActivity : AppCompatActivity() {
                     cartList = cartList,
                     orderStatusButton = orderStatusButton
                 )
+
+                getTicketsButton.isEnabled = true
+                getTicketsButton.alpha = 1f
             }
 
             // לאחר מכן מציגים את סיכום הרכישה
