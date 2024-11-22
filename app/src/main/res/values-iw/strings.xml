@@ -20,6 +20,22 @@
     <string name="order_placed">הזמנה בוצעה</string>
     <string name="order_not_placed">הזמנה לא בוצעה</string>
     <string name="purchase_confirmed">הרכישה אושרה!</string>
+    <string name="this_is_the_explanation_text_that_gives_more_details_about_the_title_you_can_add_more_content_here">
+    זהו טקסט הסבר המספק פרטים נוספים על הכותרת. ניתן להוסיף תוכן נוסף כאן.
+</string>
+    <string name="your_title_here">הכותרת שלך כאן</string>
+    <string name="neon_howl">זעקת הניאון</string>
+    <string name="in_the_heart_of_a_neon_lit_city">
+    בעיר מוארת ניאון, כאוס מתפרץ כשקללה עתיקה מעירה את הזאב הלילי. בהובלת ביף ולינגטון וסטארלה מונשיין, קבוצה של גיבורים חייבת לחשוף את האמת לפני שהיצור ישליך את העולם לחושך נצחי.
+</string>
+    <string name="order_status_main">סטטוס הזמנה</string>
+    <string name="reset_main">איפוס</string>
+    <string name="confirm_purchase_main">אישור רכישה</string>
+    <string name="get_tickets_main">קבל כרטיסים</string>
+    <string name="child_10_main">ילד: 10 ש"ח</string>
+    <string name="adult_20_main">מבוגר: 20 ש"ח</string>
+    <string name="number_of_tickets_0_main">מספר כרטיסים: 0</string>
+    <string name="select_number_of_tickets_main">בחר מספר כרטיסים</string>
 
 
     <string-array name="cinemas_array">

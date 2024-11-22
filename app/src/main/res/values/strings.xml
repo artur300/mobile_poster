@@ -27,6 +27,14 @@
     <string name="order_placed">Order Placed</string>
     <string name="order_not_placed">Order Not Placed</string>
     <string name="purchase_confirmed">Purchase Confirmed!</string>
+    <string name="order_status_main">Order Status</string>
+    <string name="reset_main">Reset</string>
+    <string name="confirm_purchase_main">Confirm Purchase</string>
+    <string name="get_tickets_main">Get Tickets</string>
+    <string name="child_10_main">Child: 10$</string>
+    <string name="adult_20_main">Adult: 20$</string>
+    <string name="number_of_tickets_0_main">Number of Tickets:0</string>
+    <string name="select_number_of_tickets_main">Select Number of Tickets</string>
 
 
     <string-array name="cinemas_array">
