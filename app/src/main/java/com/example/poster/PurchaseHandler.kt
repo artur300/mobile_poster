@@ -48,7 +48,6 @@ fun addToCart(
     Toast.makeText(context, "Added $numberOfTickets $ticketType tickets. Total: $$totalPrice", Toast.LENGTH_LONG).show()
 }
 
-// פונקציה להצגת סיכום העגלה עם זמן מהספינר
 fun showCartSummaryDialog(context: Context, cartList: ArrayList<Ticket>) {
     val dialog = Dialog(context)
     dialog.setContentView(R.layout.dialog_purchase_summary)
@@ -65,7 +64,7 @@ fun showCartSummaryDialog(context: Context, cartList: ArrayList<Ticket>) {
     val closeButton: Button = dialog.findViewById(R.id.closeButton)
 
     if (cartList.isEmpty()) {
-        Toast.makeText(context, "Your cart is empty.", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, context.getString(R.string.cart_empty_message), Toast.LENGTH_LONG).show()
         return
     }
 
@@ -81,22 +80,18 @@ fun showCartSummaryDialog(context: Context, cartList: ArrayList<Ticket>) {
     }
 
     // הצגת המידע בדיאלוג
-    cinemaNameText.text = "Cinema: $cinemaName"
-    dateText.text = "Screening Time: $screeningTime"
-    numberOfTicketsText.text = "Number of Tickets: $totalTickets"
-    totalCostText.text = "Total Cost: $$totalPrice"
+    cinemaNameText.text = context.getString(R.string.cinema_none_confirm, cinemaName)
+    dateText.text = context.getString(R.string.screening_time_none_confirm, screeningTime)
+    numberOfTicketsText.text = context.getString(R.string.number_of_tickets_0_confirm, totalTickets)
+    totalCostText.text = context.getString(R.string.total_cost_0_confirm, totalPrice)
 
-
-
+    closeButton.text = context.getString(R.string.close_confirm)
     closeButton.setOnClickListener {
         dialog.dismiss()
     }
 
     dialog.show()
 }
-
-
-//------------------------------------------------------------
 
 fun showConfirmPurchaseSummaryDialog(context: Context, cartList: ArrayList<Ticket>) {
     val dialog = Dialog(context)
@@ -115,7 +110,7 @@ fun showConfirmPurchaseSummaryDialog(context: Context, cartList: ArrayList<Ticke
     val closeButton: Button = dialog.findViewById(R.id.closeButton)
 
     if (cartList.isEmpty()) {
-        Toast.makeText(context, "Your cart is empty.", Toast.LENGTH_LONG).show()
+        Toast.makeText(context, context.getString(R.string.cart_empty_message), Toast.LENGTH_LONG).show()
         return
     }
 
@@ -131,16 +126,16 @@ fun showConfirmPurchaseSummaryDialog(context: Context, cartList: ArrayList<Ticke
     }
 
     // הצגת המידע בדיאלוג
-    cinemaNameText.text = "Cinema: $cinemaName"
-    dateText.text = "Screening Time: $screeningTime"
-    numberOfTicketsText.text = "Number of Tickets: $totalTickets"
-    totalCostText.text = "Total Cost: $$totalPrice"
-    orderStatusText.text = "Order Status: Placed"
+    cinemaNameText.text = context.getString(R.string.cinema_none_confirm, cinemaName)
+    dateText.text = context.getString(R.string.screening_time_none_confirm, screeningTime)
+    numberOfTicketsText.text = context.getString(R.string.number_of_tickets_0_confirm, totalTickets)
+    totalCostText.text = context.getString(R.string.total_cost_0_confirm, totalPrice)
+    orderStatusText.text = context.getString(R.string.order_status_placed_confirm)
 
+    closeButton.text = context.getString(R.string.close_confirm)
     closeButton.setOnClickListener {
         dialog.dismiss()
     }
 
     dialog.show()
 }
-

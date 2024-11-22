@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">פוסטר</string>
+    <string name="purchase_tickets">רכוש כרטיסים</string>
+    <string name="order_summary_confirm">סיכום הזמנה</string>
+    <string name="cinema_none_confirm">בית קולנוע: %s</string>
+    <string name="screening_time_none_confirm">זמן הקרנה: %s</string>
+    <string name="number_of_tickets_0_confirm">מספר כרטיסים: %d</string>
+    <string name="total_cost_0_confirm">סכום כללי: %d ש"ח</string>
+    <string name="order_status_placed_confirm">הזמנה בוצעה</string>
+    <string name="close_confirm">סגור</string>
+    <string name="cart_summary_purchase">סיכום פריטים</string>
+    <string name="cinema_none_purchase">בית קולנוע: %s</string>
+    <string name="screening_time_none_purchase">זמן הקרנה: %s</string>
+    <string name="number_of_tickets_0_purchase">מספר כרטיסים: %d</string>
+    <string name="total_cost_0_purchase">סכום כללי: %d ש"ח</string>
+    <string name="order_status_not_placed_purchase">הזמנה לא בוצעה</string>
+    <string name="close_purchase">סגור</string>
+    <string name="cart_empty_message">העגלה שלך ריקה.</string>
+
+    <string-array name="cinemas_array">
+        <item>יס פלאנט</item>
+        <item>קולנוע לב</item>
+        <item>רב חן</item>
+        <item>סינמה סיטי</item>
+        <item>הוט סינמה</item>
+    </string-array>
+
+    <string-array name="screening_times_array">
+        <item>10:30 בבוקר</item>
+        <item>12:45 בצהריים</item>
+        <item>3:00 אחרי הצהריים</item>
+        <item>5:15 אחרי הצהריים</item>
+        <item>7:30 בערב</item>
+        <item>9:45 בערב</item>
+        <item>11:00 בלילה</item>
+    </string-array>
+</resources>

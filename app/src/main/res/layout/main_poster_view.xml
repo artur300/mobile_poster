@@ -106,8 +106,6 @@
             />
 
 
-
-
         <!-- ספינר של זמני הקרנה -->
         <Spinner
             android:id="@+id/timeSpinner"
@@ -117,9 +115,6 @@
             android:layout_marginBottom="16dp"
 
             />
-
-
-
 
         <!-- SeekBar לבחירת מספר הכרטיסים -->
         <TextView
@@ -136,7 +131,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="10"
-            android:progress="1"
+            android:progress="0"
             android:paddingBottom="16dp"
             android:tickMark="@drawable/tick_mark"
             android:tickMarkTint="#FFEB3B"
@@ -193,20 +188,6 @@
                 android:layout_marginStart="8dp" />
 
         </LinearLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <!-- כפתור רכישה -->
         <androidx.appcompat.widget.AppCompatButton

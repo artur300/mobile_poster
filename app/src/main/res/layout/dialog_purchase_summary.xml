@@ -8,7 +8,7 @@
         android:id="@+id/dialogTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Cart Summary"
+        android:text="@string/cart_summary_purchase"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textColor="@color/white"
@@ -18,7 +18,7 @@
         android:id="@+id/cinema_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cinema: none"
+        android:text="@string/cinema_none_purchase"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
@@ -26,7 +26,7 @@
         android:id="@+id/Date"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Screening Time: none"
+        android:text="@string/screening_time_none_purchase"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
@@ -34,7 +34,7 @@
         android:id="@+id/Number_Of_Tickets"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Number Of Tickets: 0"
+        android:text="@string/number_of_tickets_0_purchase"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
@@ -42,7 +42,7 @@
         android:id="@+id/Total_cost"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total cost: 0$"
+        android:text="@string/total_cost_0_purchase"
         android:textColor="@color/white"
         android:textSize="16sp" />
 
@@ -50,7 +50,7 @@
         android:id="@+id/statusText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Order Status: Not Placed"
+        android:text="@string/order_status_not_placed_purchase"
         android:textSize="16sp"
         android:textColor="#F44336" />
 
@@ -59,6 +59,6 @@
         android:id="@+id/closeButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Close"
+        android:text="@string/close_purchase"
         android:textStyle="bold"/>
 </LinearLayout>
