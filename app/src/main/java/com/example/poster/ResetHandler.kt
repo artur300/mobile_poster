@@ -1,5 +1,6 @@
 package com.example.poster
 
+import android.content.Context
 import android.widget.CheckBox
 import android.widget.SeekBar
 import android.widget.Spinner
@@ -13,6 +14,7 @@ var isOrderPlaced = false
 
 // פונקציה לאיפוס הבחירות
 fun resetSelections(
+    context: Context,
     cinemaSpinner: Spinner,
     timeSpinner: Spinner,
     adultCheckBox: CheckBox,
@@ -22,7 +24,6 @@ fun resetSelections(
     statusText: TextView,
     cartList: ArrayList<Ticket>,
     orderStatusButton: RadioButton
-
 ) {
     // איפוס הבחירה של הספינרים
     cinemaSpinner.setSelection(0)
@@ -42,10 +43,9 @@ fun resetSelections(
     // איפוס סטטוס ההזמנה
     isOrderPlaced = false
     statusText.text = "Order Status: Not Placed"
-    statusText.setTextColor(ContextCompat.getColor(cinemaSpinner.context, R.color.black))
-    updateOrderStatus(orderStatusButton, isOrderPlaced)
+    statusText.setTextColor(ContextCompat.getColor(context, R.color.black))
+    updateOrderStatus(orderStatusButton, isOrderPlaced, context)
+
     // הודעה למשתמש
-    Toast.makeText(cinemaSpinner.context, "Selections have been reset.", Toast.LENGTH_SHORT).show()
-
-
+    Toast.makeText(context, "Selections have been reset.", Toast.LENGTH_SHORT).show()
 }

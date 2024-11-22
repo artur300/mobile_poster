@@ -17,6 +17,10 @@
     <string name="order_status_not_placed_purchase">הזמנה לא בוצעה</string>
     <string name="close_purchase">סגור</string>
     <string name="cart_empty_message">העגלה שלך ריקה.</string>
+    <string name="order_placed">הזמנה בוצעה</string>
+    <string name="order_not_placed">הזמנה לא בוצעה</string>
+    <string name="purchase_confirmed">הרכישה אושרה!</string>
+
 
     <string-array name="cinemas_array">
         <item>יס פלאנט</item>

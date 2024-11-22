@@ -5,21 +5,22 @@ import android.widget.Toast
 import android.content.Context
 
 // פונקציה לעדכון כפתור הרדיו
-fun updateOrderStatus(orderStatusButton: RadioButton, isOrderPlaced: Boolean) {
+fun updateOrderStatus(orderStatusButton: RadioButton, isOrderPlaced: Boolean, context: Context) {
     orderStatusButton.isChecked = isOrderPlaced // עדכון מצב הכפתור
     if (isOrderPlaced) {
-        orderStatusButton.text = "Order Placed" // שינוי טקסט הכפתור במצב בוצע
+        orderStatusButton.text = context.getString(R.string.order_placed) // שימוש בטקסט
     } else {
-        orderStatusButton.text = "Order Not Placed" // שינוי טקסט הכפתור במצב לא בוצע
+        orderStatusButton.text = context.getString(R.string.order_not_placed) // שימוש בטקסט
     }
 }
+
 
 // פונקציה לטיפול בלחיצה על Confirm Purchase
 fun handleConfirmPurchase(
     context: Context,
     orderStatusButton: RadioButton
 ): Boolean {
-    Toast.makeText(context, "Purchase Confirmed!", Toast.LENGTH_SHORT).show()
-    updateOrderStatus(orderStatusButton, true) // עדכון כפתור הרדיו
+    Toast.makeText(context, context.getString(R.string.purchase_confirmed), Toast.LENGTH_SHORT).show()
+    updateOrderStatus(orderStatusButton, true, context) // עדכון כפתור הרדיו
     return true // מחזיר שההזמנה בוצעה
 }

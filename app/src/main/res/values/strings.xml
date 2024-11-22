@@ -24,6 +24,10 @@
     <string name="order_status_not_placed_purchase">Order Status: Not Placed</string>
     <string name="close_purchase">Close</string>
     <string name="cart_empty_message">Your cart is empty.</string>
+    <string name="order_placed">Order Placed</string>
+    <string name="order_not_placed">Order Not Placed</string>
+    <string name="purchase_confirmed">Purchase Confirmed!</string>
+
 
     <string-array name="cinemas_array">
         <item>Yes Planet</item>

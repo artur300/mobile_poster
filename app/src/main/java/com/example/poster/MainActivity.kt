@@ -48,17 +48,19 @@ class MainActivity : AppCompatActivity() {
         val orderStatusButton: RadioButton = findViewById(R.id.orderStatusButton)
 
         // מצב התחלתי: אדום
-        updateOrderStatus(orderStatusButton, isOrderPlaced)
+        // מצב התחלתי: אדום
+        updateOrderStatus(orderStatusButton, isOrderPlaced, this)
 
-        // מאזין ללחיצה על "Confirm Purchase"
+// מאזין ללחיצה על "Confirm Purchase"
         confirmPurchaseButton.setOnClickListener {
             animateButton(confirmPurchaseButton)
             isOrderPlaced = handleConfirmPurchase(this, orderStatusButton) // משנה את המצב ל-true
-            updateOrderStatus(orderStatusButton, isOrderPlaced) // מעדכן את מצב הכפתור
+            updateOrderStatus(orderStatusButton, isOrderPlaced, this) // מעדכן את מצב הכפתור
             showConfirmPurchaseSummaryDialog(this, cartList)
             getTicketsButton.isEnabled = false
             getTicketsButton.alpha = 0.5f // מוריד את השקיפות כדי לסמן שהוא נעול
         }
+
 
 
         // הגדרות רכיבים
@@ -99,6 +101,7 @@ class MainActivity : AppCompatActivity() {
 
                 // קריאה לפונקציה resetSelections
                 resetSelections(
+                    context = this,
                     cinemaSpinner = cinemaSpinner,
                     timeSpinner = timeSpinner,
                     adultCheckBox = adultCheckBox,
@@ -109,6 +112,7 @@ class MainActivity : AppCompatActivity() {
                     cartList = cartList,
                     orderStatusButton = orderStatusButton
                 )
+
 
                 getTicketsButton.isEnabled = true
                 getTicketsButton.alpha = 1f
