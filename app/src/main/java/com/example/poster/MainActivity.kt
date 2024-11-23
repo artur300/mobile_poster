@@ -33,6 +33,9 @@ class MainActivity : AppCompatActivity() {
         val cartList = ArrayList<Ticket>()
         val icon: ImageView = findViewById(R.id.icon)
 
+
+
+
         // הפעלת האנימציה האינסופית
         startSizeAnimation(icon)
 
@@ -67,7 +70,7 @@ class MainActivity : AppCompatActivity() {
         setupCinemaSpinner(this, cinemaSpinner)
         setupTimeSpinner(this, timeSpinner)
         setupCheckBoxListeners(adultCheckBox, childCheckBox)
-        setupSeekBar(ticketSeekBar, ticketCountTextView)
+        setupSeekBar(ticketSeekBar, ticketCountTextView, this)
 
         // מאזין לכפתור "Get Tickets"
         getTicketsButton.setOnClickListener {

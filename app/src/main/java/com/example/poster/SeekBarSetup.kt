@@ -1,18 +1,18 @@
 package com.example.poster
+import android.content.Context
 
 import android.widget.SeekBar
 import android.widget.TextView
 
 fun setupSeekBar(
     ticketSeekBar: SeekBar,
-    ticketCountTextView: TextView
+    ticketCountTextView: TextView,
+    context: Context
 ) {
-    var numberOfTickets = 0
     ticketSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
         override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-            // מעדכנים את מספר הכרטיסים ומציגים אותו בטקסט
-            numberOfTickets = progress
-            ticketCountTextView.text = "Number of Tickets: $numberOfTickets"
+            val text = context.getString(R.string.number_of_tickets_format, progress)
+            ticketCountTextView.text = text
         }
 
         override fun onStartTrackingTouch(seekBar: SeekBar?) {}

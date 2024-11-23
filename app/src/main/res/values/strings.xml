@@ -35,6 +35,7 @@
     <string name="adult_20_main">Adult: 20$</string>
     <string name="number_of_tickets_0_main">Number of Tickets:0</string>
     <string name="select_number_of_tickets_main">Select Number of Tickets</string>
+    <string name="number_of_tickets_format">Number of Tickets: %d</string>
 
 
     <string-array name="cinemas_array">

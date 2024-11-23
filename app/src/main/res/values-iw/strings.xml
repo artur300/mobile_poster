@@ -18,6 +18,7 @@
     <string name="close_purchase">סגור</string>
     <string name="cart_empty_message">העגלה שלך ריקה.</string>
     <string name="order_placed">הזמנה בוצעה</string>
+    <string name="number_of_tickets_format">מספר כרטיסים: %d</string>
     <string name="order_not_placed">הזמנה לא בוצעה</string>
     <string name="purchase_confirmed">הרכישה אושרה!</string>
     <string name="this_is_the_explanation_text_that_gives_more_details_about_the_title_you_can_add_more_content_here">
