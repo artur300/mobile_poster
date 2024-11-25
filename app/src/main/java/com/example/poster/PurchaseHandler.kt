@@ -25,16 +25,23 @@ fun addToCart(
     val isChild = childCheckBox.isChecked
 
     if (!isAdult && !isChild) {
-        Toast.makeText(context, "Please select Adult or Child ticket", Toast.LENGTH_LONG).show()
+        val message = context.getString(R.string.select_ticket_type_message)
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
         return
     }
 
-    val ticketType = if (isAdult) "Adult" else "Child"
-    val ticketPrice = if (isAdult) 20 else 10
 
+    val ticketType = if (isAdult) {
+        context.getString(R.string.adult)
+    } else {
+        context.getString(R.string.child)
+    }
+    val ticketPrice = if (isAdult) 20 else 10
     val numberOfTickets = ticketSeekBar.progress
+
     if (numberOfTickets == 0) {
-        Toast.makeText(context, "Please select at least one ticket", Toast.LENGTH_LONG).show()
+        val message = context.getString(R.string.select_at_least_one_ticket_message)
+        Toast.makeText(context, message, Toast.LENGTH_LONG).show()
         return
     }
 
@@ -45,7 +52,14 @@ fun addToCart(
 
     cartList.add(newTicket)
 
-    Toast.makeText(context, "Added $numberOfTickets $ticketType tickets. Total: $$totalPrice", Toast.LENGTH_LONG).show()
+    val message = context.getString(
+        R.string.tickets_added_message,
+        numberOfTickets, // %1$d
+        ticketType,      // %2$s
+        totalPrice       // %3$d
+    )
+    Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
+
 }
 
 fun showCartSummaryDialog(context: Context, cartList: ArrayList<Ticket>) {

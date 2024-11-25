@@ -32,8 +32,8 @@ class MainActivity : AppCompatActivity() {
         val posterImageView: ImageView = findViewById(R.id.Poster)
         val cartList = ArrayList<Ticket>()
         val icon: ImageView = findViewById(R.id.icon)
-
-
+        val confirmPurchaseButton: Button = findViewById(R.id.confirm_purchase)
+        val orderStatusButton: RadioButton = findViewById(R.id.orderStatusButton)
 
 
         // הפעלת האנימציה האינסופית
@@ -45,10 +45,6 @@ class MainActivity : AppCompatActivity() {
             animatePoster(posterImageView)
         }
 
-
-        // מציאת הכפתורים
-        val confirmPurchaseButton: Button = findViewById(R.id.confirm_purchase)
-        val orderStatusButton: RadioButton = findViewById(R.id.orderStatusButton)
 
         // מצב התחלתי: אדום
         // מצב התחלתי: אדום
@@ -88,7 +84,7 @@ class MainActivity : AppCompatActivity() {
             )
 
             ticketSeekBar.progress = 0
-            ticketCountTextView.text = "Number of Tickets: 0"
+            ticketCountTextView.text = getString(R.string.number_of_tickets_0_reset)
 
             // איפוס CheckBoxes
             adultCheckBox.isChecked = false

@@ -37,6 +37,13 @@
     <string name="adult_20_main">מבוגר: 20 ש"ח</string>
     <string name="number_of_tickets_0_main">מספר כרטיסים: 0</string>
     <string name="select_number_of_tickets_main">בחר מספר כרטיסים</string>
+    <string name="number_of_tickets_0_reset">מספר כרטיסים: 0</string>
+    <string name="selections_reset_message">הבחירות אופסו.</string>
+    <string name="tickets_added_message">נוספו %1$d כרטיסי %2$s. סה"כ: ₪%3$d</string>
+    <string name="child">ילד</string>
+    <string name="adult">מבוגר</string>
+    <string name="select_ticket_type_message">אנא בחר כרטיס מבוגר או ילד</string>
+    <string name="select_at_least_one_ticket_message">אנא בחר לפחות כרטיס אחד</string>
 
 
     <string-array name="cinemas_array">
@@ -50,10 +57,10 @@
     <string-array name="screening_times_array">
         <item>10:30 בבוקר</item>
         <item>12:45 בצהריים</item>
-        <item>3:00 אחרי הצהריים</item>
-        <item>5:15 אחרי הצהריים</item>
-        <item>7:30 בערב</item>
-        <item>9:45 בערב</item>
-        <item>11:00 בלילה</item>
+        <item>15:00 אחר הצהריים</item>
+        <item>17:15 אחר הצהריים</item>
+        <item>19:30 בערב</item>
+        <item>21:45 בערב</item>
+        <item>23:00 בלילה</item>
     </string-array>
 </resources>

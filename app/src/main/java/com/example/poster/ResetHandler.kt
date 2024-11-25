@@ -47,5 +47,5 @@ fun resetSelections(
     updateOrderStatus(orderStatusButton, isOrderPlaced, context)
 
     // הודעה למשתמש
-    Toast.makeText(context, "Selections have been reset.", Toast.LENGTH_SHORT).show()
+    Toast.makeText(context, context.getString(R.string.selections_reset_message), Toast.LENGTH_SHORT).show()
 }
