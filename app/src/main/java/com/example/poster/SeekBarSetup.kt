@@ -9,6 +9,7 @@ fun setupSeekBar(
     ticketCountTextView: TextView,
     context: Context
 ) {
+    //מאזין ל-seekbar
     ticketSeekBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
         override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
             val text = context.getString(R.string.number_of_tickets_format, progress)

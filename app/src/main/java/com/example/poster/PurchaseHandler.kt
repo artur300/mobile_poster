@@ -54,9 +54,9 @@ fun addToCart(
 
     val message = context.getString(
         R.string.tickets_added_message,
-        numberOfTickets, // %1$d
-        ticketType,      // %2$s
-        totalPrice       // %3$d
+        numberOfTickets,
+        ticketType,
+        totalPrice
     )
     Toast.makeText(context, message, Toast.LENGTH_SHORT).show()
 
@@ -81,6 +81,8 @@ fun showCartSummaryDialog(context: Context, cartList: ArrayList<Ticket>) {
         Toast.makeText(context, context.getString(R.string.cart_empty_message), Toast.LENGTH_LONG).show()
         return
     }
+
+
 
     // חישוב מספר הכרטיסים הכולל והמחיר הכולל
     var totalTickets = 0

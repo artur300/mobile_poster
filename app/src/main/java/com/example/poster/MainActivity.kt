@@ -10,7 +10,6 @@ import android.widget.Spinner
 import android.widget.TextView
 import android.widget.ImageView
 import android.widget.RadioButton
-import com.example.poster.animateButton
 
 
 class MainActivity : AppCompatActivity() {
@@ -35,11 +34,14 @@ class MainActivity : AppCompatActivity() {
         val confirmPurchaseButton: Button = findViewById(R.id.confirm_purchase)
         val orderStatusButton: RadioButton = findViewById(R.id.orderStatusButton)
 
+        confirmPurchaseButton.isEnabled = false
+        confirmPurchaseButton.alpha = 0.5f
 
         // הפעלת האנימציה האינסופית
         startSizeAnimation(icon)
 
-        // שינוי צבע זמני בעת לחיצה
+        //1
+        // מאזין ללחיצה על האייקון
         icon.setOnClickListener {
             handleIconClick(icon)
             animatePoster(posterImageView)
@@ -47,10 +49,9 @@ class MainActivity : AppCompatActivity() {
 
 
         // מצב התחלתי: אדום
-        // מצב התחלתי: אדום
         updateOrderStatus(orderStatusButton, isOrderPlaced, this)
-
-// מאזין ללחיצה על "Confirm Purchase"
+        //2
+        // מאזין ללחיצה על "Confirm Purchase"
         confirmPurchaseButton.setOnClickListener {
             animateButton(confirmPurchaseButton)
             isOrderPlaced = handleConfirmPurchase(this, orderStatusButton) // משנה את המצב ל-true
@@ -65,14 +66,17 @@ class MainActivity : AppCompatActivity() {
         // הגדרות רכיבים
         setupCinemaSpinner(this, cinemaSpinner)
         setupTimeSpinner(this, timeSpinner)
+        //3
+        // מאזין לכפתור "Get Tickets"
         setupCheckBoxListeners(adultCheckBox, childCheckBox)
         setupSeekBar(ticketSeekBar, ticketCountTextView, this)
 
+        //4
         // מאזין לכפתור "Get Tickets"
         getTicketsButton.setOnClickListener {
 
             animateButton(getTicketsButton)
-            // קודם כל מוסיפים לעגלה
+            // הוספה לעגלה
             addToCart(
                 context = this,
                 cinemaSpinner = cinemaSpinner,
@@ -82,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                 ticketSeekBar = ticketSeekBar,
                 cartList = cartList
             )
-
+            updateConfirmButtonState(confirmPurchaseButton, cartList)
             ticketSeekBar.progress = 0
             ticketCountTextView.text = getString(R.string.number_of_tickets_0_reset)
 
@@ -90,7 +94,7 @@ class MainActivity : AppCompatActivity() {
             adultCheckBox.isChecked = false
             childCheckBox.isChecked = false
 
-
+            //5
             // מאזין לכפתור "Reset"
             resetButton.setOnClickListener {
                 animateButton(resetButton)
@@ -112,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                     orderStatusButton = orderStatusButton
                 )
 
-
+                updateConfirmButtonState(confirmPurchaseButton, cartList)
                 getTicketsButton.isEnabled = true
                 getTicketsButton.alpha = 1f
             }
@@ -120,8 +124,8 @@ class MainActivity : AppCompatActivity() {
             // לאחר מכן מציגים את סיכום הרכישה
             showCartSummaryDialog(this, cartList)
         }
-
-        // אנימציה לפוסטר - סיבוב ושקיפות
+        //6
+        // מאזין לכפתור לסיבוב פוסטר
         posterImageView.setOnClickListener {
             animatePoster(posterImageView)
         }

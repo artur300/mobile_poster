@@ -35,14 +35,13 @@ fun resetSelections(
 
     // איפוס ה-SeekBar
     ticketSeekBar.progress = 0
-    ticketCountTextView.text = "Number of Tickets: 0"
-
+    ticketCountTextView.text = context.getString(R.string.number_of_tickets_0_reset)
     // איפוס רשימת העגלה
     cartList.clear()
 
     // איפוס סטטוס ההזמנה
     isOrderPlaced = false
-    statusText.text = "Order Status: Not Placed"
+    statusText.text = context.getString(R.string.order_status_not_placed_purchase)
     statusText.setTextColor(ContextCompat.getColor(context, R.color.black))
     updateOrderStatus(orderStatusButton, isOrderPlaced, context)
 
