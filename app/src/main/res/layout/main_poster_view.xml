@@ -96,6 +96,16 @@
             android:textColor="@color/white"
             android:textSize="14sp" />
 
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_cinema"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="16dp" />
         <!-- ספינר של בתי קולנוע -->
         <Spinner
 
@@ -106,6 +116,14 @@
             android:layout_marginBottom="16dp"
             />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/select_time"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:paddingTop="16dp" />
 
         <!-- ספינר של זמני הקרנה -->
         <Spinner
